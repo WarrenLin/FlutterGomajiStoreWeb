@@ -8,7 +8,7 @@ class ReservationMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height:
-          MediaQuery.of(context).size.height - AppBar().preferredSize.height,
+          MediaQuery.of(context).size.height - AppBar().preferredSize.height - 24,
       child: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.max,

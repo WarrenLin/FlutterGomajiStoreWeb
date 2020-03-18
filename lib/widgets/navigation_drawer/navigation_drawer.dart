@@ -19,25 +19,28 @@ class NavigationDrawer extends StatelessWidget {
         children: <Widget>[
           Container(
               width: MediaQuery.of(context).size.width,
-              height: 100.0,
+              height: 124.0,
               color: Colors.orange,
-              child: Row(
-                children: <Widget>[
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Image.asset("assets/images/menu_icon.png",
-                          width: 65, height: 65),
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(0, 24, 0, 0),
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Image.asset("assets/images/menu_icon.png",
+                            width: 65, height: 65),
+                      ),
+                      flex: 3,
                     ),
-                    flex: 3,
-                  ),
-                  Expanded(
-                    child: Text("佐登妮絲國際美容連鎖(淡水店)",
-                        style: TextStyle(fontSize: 18.0, color: Colors.white),
-                        textAlign: TextAlign.left),
-                    flex: 7,
-                  ),
-                ],
+                    Expanded(
+                      child: Text("佐登妮絲國際美容連鎖(淡水店)",
+                          style: TextStyle(fontSize: 18.0, color: Colors.white),
+                          textAlign: TextAlign.left),
+                      flex: 7,
+                    ),
+                  ],
+                ),
               )),
           DrawerItem('預約管理', Icons.account_balance_wallet, (){clickCallback("預約管理");}, false),
           DrawerItem('訂單記錄', Icons.assignment, (){clickCallback("訂單記錄");}, false),
