@@ -1,0 +1,2 @@
+# FlutterGomajiStoreWeb
+Flutter web demo.
