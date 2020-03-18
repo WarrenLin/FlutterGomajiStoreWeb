@@ -1,6 +1,18 @@
-# flutter_web_demo
+# FlutterGomajiStoreWeb
 
-A new Flutter project.
+
+Desktop 
+
+<img width="600" alt="portfolio_view" src="https://github.com/WarrenLin/FlutterGomajiStoreWeb/blob/master/screenshot/home_desktop.png">
+
+Mobile
+
+<img width="300" alt="portfolio_view" src="https://github.com/WarrenLin/FlutterGomajiStoreWeb/blob/master/screenshot/home_mobile.png">   <img width="300" alt="portfolio_view" src="https://github.com/WarrenLin/FlutterGomajiStoreWeb/blob/master/screenshot/navigation_mobile.png">
+
+App
+
+<img width="300" alt="portfolio_view" src="https://github.com/WarrenLin/FlutterGomajiStoreWeb/blob/master/screenshot/home_app.jpg">    <img width="300" alt="portfolio_view" src="https://github.com/WarrenLin/FlutterGomajiStoreWeb/blob/master/screenshot/navigation_app.jpg">
+
 
 ## Getting Started
 
