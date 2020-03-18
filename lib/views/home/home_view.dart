@@ -39,7 +39,7 @@ class _HomeViewState extends State<HomeView> {
             desktop: HomeContentDesktop(),
             mobile: Column(
               children: <Widget>[
-                HomeContentMobile()
+                HomeContentMobile(clickMenu)
               ],
             )),
       ),
@@ -60,7 +60,10 @@ class _HomeViewState extends State<HomeView> {
 
   Widget getActionIcon() {
     if(clickMenu == "預約管理") {
-      return Icon(Icons.calendar_today, color: Colors.orange,);
+      return Padding(
+        padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
+        child: Icon(Icons.calendar_today, color: Colors.orange,),
+      );
     }
     else {
       return Container();

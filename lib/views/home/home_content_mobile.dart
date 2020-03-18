@@ -4,6 +4,10 @@ import 'package:flutter_web_demo/views/reservation/reservation_view.dart';
 import 'package:flutter_web_demo/widgets/navigation_bar/navigation_bar.dart';
 
 class HomeContentMobile extends StatefulWidget {
+  final String title;
+
+  const HomeContentMobile(this.title);
+
   @override
   State<StatefulWidget> createState() {
     return _HomeContentMobileState();
@@ -11,15 +15,13 @@ class HomeContentMobile extends StatefulWidget {
 }
 
 class _HomeContentMobileState extends State<HomeContentMobile> {
-  String title = "title";
-
   @override
   Widget build(BuildContext context) {
     return _contentView();
   }
 
   Widget _contentView() {
-    switch(title) {
+    switch(widget.title) {
       case "預約管理": {
         return ReservationView();
       }
