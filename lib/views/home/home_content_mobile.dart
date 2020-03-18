@@ -15,22 +15,7 @@ class _HomeContentMobileState extends State<HomeContentMobile> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: <Widget>[
-        Expanded(
-          child: NavigationBar((String clickTitle){
-            setState(() {
-              title = clickTitle;
-            });
-          }),
-          flex: 2,
-        ),
-        Expanded(
-          child: _contentView(),
-          flex: 8,
-        ),
-      ],
-    );
+    return _contentView();
   }
 
   Widget _contentView() {

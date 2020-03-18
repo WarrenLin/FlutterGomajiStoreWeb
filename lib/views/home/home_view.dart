@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_demo/views/home/home_content_desktop.dart';
+import 'package:flutter_web_demo/views/home/home_content_mobile.dart';
 import 'package:flutter_web_demo/widgets/navigation_bar/navigation_bar.dart';
 import 'package:flutter_web_demo/widgets/navigation_drawer/navigation_drawer.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -12,7 +13,7 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-  String clickMenu = "MOBILE or Tablet";
+  String clickMenu = "預約管理";
 
   @override
   Widget build(BuildContext context) {
@@ -38,8 +39,7 @@ class _HomeViewState extends State<HomeView> {
             desktop: HomeContentDesktop(),
             mobile: Column(
               children: <Widget>[
-                NavigationBar((String clickTitle) {}),
-                Text(clickMenu),
+                HomeContentMobile()
               ],
             )),
       ),
@@ -48,10 +48,22 @@ class _HomeViewState extends State<HomeView> {
 
   AppBar createAppBar() {
     return AppBar(
-      title: Text("AppBar"),
-      iconTheme: IconThemeData(color: Colors.white),
-      backgroundColor: Colors.orange,
-      centerTitle: true,
+      title: Text(clickMenu, style: TextStyle(color: Colors.black),),
+      iconTheme: IconThemeData(color: Colors.orange),
+      backgroundColor: Colors.white,
+      centerTitle: false,
+      actions: <Widget>[
+        getActionIcon()
+      ],
     );
+  }
+
+  Widget getActionIcon() {
+    if(clickMenu == "預約管理") {
+      return Icon(Icons.calendar_today, color: Colors.orange,);
+    }
+    else {
+      return Container();
+    }
   }
 }
