@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_web_demo/views/record/record_view.dart';
 import 'package:flutter_web_demo/views/reservation/reservation_view.dart';
 import 'package:flutter_web_demo/widgets/navigation_bar/navigation_bar.dart';
 
@@ -40,7 +41,7 @@ class _HomeContentDesktopState extends State<HomeContentDesktop> {
       }
       break;
       case "訂單記錄": {
-        return Text("訂單記錄");
+        return RecordView();
       }
       break;
       case "通知": {
