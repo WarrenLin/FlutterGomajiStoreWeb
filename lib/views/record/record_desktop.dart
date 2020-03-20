@@ -1,7 +1,10 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_web_demo/widgets/record_view/record_item.dart';
 import 'package:flutter_web_demo/widgets/record_view/record_list_view.dart';
 import 'package:flutter_web_demo/widgets/search_filter/record_search_desktop.dart';
+import 'dart:html' as html;
 
 class RecordDesktop extends StatelessWidget {
   @override
@@ -97,7 +100,27 @@ class RecordDesktop extends StatelessWidget {
                           "匯出Excel",
                           style: TextStyle(color: Colors.white),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          final text = 'this is the text file';
+
+                          // prepare
+                          final bytes = utf8.encode(text);
+                          final blob = html.Blob([bytes]);
+                          final url = html.Url.createObjectUrlFromBlob(blob);
+                          final anchor =
+                          html.document.createElement('a') as html.AnchorElement
+                            ..href = url
+                            ..style.display = 'none'
+                            ..download = 'some_name.txt';
+                          html.document.body.children.add(anchor);
+
+                          // download
+                          anchor.click();
+
+                          // cleanup
+                          html.document.body.children.remove(anchor);
+                          html.Url.revokeObjectUrl(url);
+                        },
                         color: Colors.orange,
                       )
                     ],

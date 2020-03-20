@@ -8,7 +8,8 @@ class RecordMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height - AppBar().preferredSize.height,
+      height:
+          MediaQuery.of(context).size.height - AppBar().preferredSize.height,
       color: Color.fromARGB(255, 247, 247, 249),
       child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
@@ -72,8 +73,8 @@ class RecordMobile extends StatelessWidget {
                               height: 50,
                               child: Text(
                                 "查詢",
-                                style:
-                                    TextStyle(color: Colors.white, fontSize: 16),
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 16),
                               ),
                             ),
                             onPressed: () {},
