@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_web_demo/views/record/record_desktop.dart';
+import 'package:flutter_web_demo/views/record/record_mobile.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class RecordView extends StatelessWidget {
@@ -8,7 +9,7 @@ class RecordView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
       desktop: RecordDesktop(),
-      mobile: Text("Mobile"),
+      mobile: RecordMobile(),
     );
   }
 }

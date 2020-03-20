@@ -16,8 +16,8 @@ class RecordItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 150,
-      height: 150,
+      width: width,
+      height: height,
       decoration: BoxDecoration(
           color: Colors.white,
           border: Border.all(color: Colors.orange, width: 2.0),

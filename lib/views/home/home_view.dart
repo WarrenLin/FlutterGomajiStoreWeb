@@ -59,7 +59,7 @@ class _HomeViewState extends State<HomeView> {
   }
 
   Widget getActionIcon() {
-    if(clickMenu == "預約管理") {
+    if(clickMenu == "預約管理" || clickMenu == "訂單記錄") {
       return Padding(
         padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
         child: Icon(Icons.calendar_today, color: Colors.orange,),
