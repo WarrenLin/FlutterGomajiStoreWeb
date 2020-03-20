@@ -34,7 +34,7 @@ class RecordMobile extends StatelessWidget {
                     Row(
                       children: <Widget>[
                         Expanded(
-                          flex: 6,
+                          flex: 4,
                           child: Container(
                             height: 50,
                             child: TextField(
